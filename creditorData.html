@@ -1,0 +1,16 @@
+<template>
+<lightning-datatable
+    key-field='id'
+    data={data}
+    columns={columns}
+    onrowselection={getSelectedName}>
+</lightning-datatable>
+<lightning-button name='AddDebt' label='Add Debt' onclick={addorremoverow}></lightning-button>
+<lightning-button name='RemoveDebt' label='Remove Debt' onclick={addorremoverow}></lightning-button>
+
+Total: {total}
+<div>
+    <span>Total Row Count: {totalRowCount}</span></br></br>
+    <span>Check Row Count: {selectedRowCount}</span>
+</div>
+</template>
