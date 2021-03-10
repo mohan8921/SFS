@@ -1,0 +1,18 @@
+<template>
+    <lightning-datatable
+        key-field='id'
+        data={data}
+        columns={columns}
+        onrowselection={getSelectedName}>
+    </lightning-datatable>
+    <lightning-button name='AddDebt' class='slds-theme_inverse' label='Add Debt' onclick={addorremoverow}></lightning-button>
+    <lightning-button name='RemoveDebt' class='slds-theme_inverse' label='Remove Debt' onclick={addorremoverow}></lightning-button>
+
+    <div class="slds-box slds-theme_inverse slds-m-top_small">
+        <p>Total: {total}</p>
+    </div>
+    <div>
+        <span class='slds-m-right_x-large'>Total Row Count: {totalRowCount}</span>
+        <span>Check Row Count: {selectedRowCount}</span>
+    </div>
+</template>
